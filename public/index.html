@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="loginDiv">
+      <input value="ash" id="usernameInput" type="text" />
+      <input value="pikachu" id="passwordInput" type="password" />
+      <button id="loginBtn" onclick="login()">Login</button>
+      <p id="errorPara" style="color: red"></p>
+    </div>
+
+    <div id="pokeApp" style="display: none">
+      <h2>Pokemon List</h2>
+      <ul id="pokeUlList"></ul>
+
+      <h3>Favorite List</h3>
+      <ul id="favoriteList"></ul>
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
