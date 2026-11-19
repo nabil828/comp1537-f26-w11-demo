@@ -1,5 +1,5 @@
 async function updateTheListOfFavoritePokemons() {
-  const response = await fetch("http://localhost:3000/api/favorites");
+  const response = await fetch("/api/favorites");
   const response_JSON = await response.json();
 
   favoriteList.innerHTML = ""
@@ -14,7 +14,7 @@ async function updateTheListOfFavoritePokemons() {
 
 
 async function addToFavorites(pokemonToAdd) {
-  const response = await fetch("http://localhost:3000/api/favorite", {
+  const response = await fetch("/api/favorite", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ async function addToFavorites(pokemonToAdd) {
 }
 
 async function login() {
-  const response = await fetch("http://localhost:3000/api/login", {
+  const response = await fetch("/api/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,7 @@ async function login() {
 }
 
 async function fetchPokemons() {
-  const response = await fetch("http://localhost:3000/pokemons");
+  const response = await fetch("/pokemons");
   const response_JSON = await response.json();
 
   if (response.status !== 200) {
